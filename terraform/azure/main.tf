@@ -1,7 +1,3 @@
-provider "azurerm" {
-  features {}
-}
-
 resource "azurerm_resource_group" "rg_cp3_robelio" {
   name     = "rg-cp3-robelio"
   location = "Brazil South"

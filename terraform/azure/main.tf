@@ -1,5 +1,5 @@
-resource "azurerm_resource_group" "rg_cp3_robelio" {
-  name     = "rg-cp3-robelio"
+resource "azurerm_resource_group" "rg_cp3_criado_pelo_terraform" {
+  name     = "rg-cp3-criado-pelo-terraform"
   location = "Brazil South"
 }
 

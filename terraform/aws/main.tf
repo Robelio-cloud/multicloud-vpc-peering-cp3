@@ -148,25 +148,3 @@ resource "aws_security_group" "sg_ec2_vpc20_priv" {
     }
 }
 
-# EC2 INSTANCES
-resource "aws_instance" "instance_sn_vpc10_pub" {
-    ami                    = "ami-0e38fa17744b2f6a5"
-    instance_type          = "t2.micro"
-    subnet_id              = aws_subnet.sn_vpc10_pub.id
-    vpc_security_group_ids = [aws_security_group.sg_ec2_vpc10_pub.id]
-    key_name               = "vockey"
-    tags = {
-        Name = "instance_sn_vpc10_pub"
-    }
-}
-
-resource "aws_instance" "instance_sn_vpc20_priv" {
-    ami                    = "ami-0e38fa17744b2f6a5"
-    instance_type          = "t2.micro"
-    subnet_id              = aws_subnet.sn_vpc20_priv.id
-    vpc_security_group_ids = [aws_security_group.sg_ec2_vpc20_priv.id]
-    key_name               = "vockey"
-    tags = {
-        Name = "instance_sn_vpc20_priv"
-    }
-}
